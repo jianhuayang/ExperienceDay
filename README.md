@@ -1,6 +1,6 @@
 # Android programming @ Coventry University
 
-![](.md_images/347.jpg)
+![](.md_images/347.JPG)
 
 Hello! Welcome to Android activities at Coventry University expereince day! 
 
