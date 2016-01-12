@@ -164,8 +164,8 @@ Follow steps below to create another app:
         android:layout_centerHorizontal="true"
         android:layout_marginTop="22dp"
         android:text="Display" />
-        ```
-        
+    ```
+    
 10. Open MainActivity.java, create a method called onButtonClick that looks like below:
     
     ```java
