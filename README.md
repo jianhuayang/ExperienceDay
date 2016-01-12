@@ -48,7 +48,7 @@ Follow the steps below to create and run your first Android app:
     ![Android_Platform_API_Version_Distribution](.md_images/Android_Platform_API_Version_Distribution.png)
     
 4. Keep clicking Next until you see Finish. Then click Finish to create your first Android project. Your screen should look similar to below:
-    
+     
     ![activity_main_xml_-_Hello_Android](.md_images/activity_main_xml_-_Hello_Android.png)
     
     If this is the first time Android Studio is being run on the computer, this step might take a while. You need to wait until the task bar finishes to move to the next step.
