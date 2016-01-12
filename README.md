@@ -4,7 +4,7 @@
 
 Hello! Welcome to Android activities at Coventry University expereince day! 
 
-In this 45 minutes session you'll have a little taste of what our students do at Coventry. In particular, what you see right now is a (much) simplified version of the material we use for our undergraduate module 'Mobile Applications Development'. If you're curious, the full set of material can be found here:
+In this 50 minutes session you'll have a little taste of what our students do at Coventry. In particular, what you see right now is a (much) simplified version of the material we use for our undergraduate module 'Mobile Applications Development'. If you're curious, the full set of material can be found here:
 
 * [Android App Development](https://github.com/covcom/388COM)
 * [iOS App Development](https://github.com/covcom/387COM)
@@ -17,7 +17,7 @@ Android has been around for a while, hence we have different versions. For each 
 
 ![Android Codename](http://techtoward.com/wp-content/uploads/2014/02/Android-Versions-History.jpg)
 
-What do I need to become an Android developer? The short answer is you'll need Java language and Android Studio, which is an IDE (integrated development environment). And of course a smart brain. Some will ask, do I have to have an Android device to be a developer? No, you don't. Even though last year our students were given Moto 360s (Moto E2s the year before, all free of charge), you don't have to own an Android device.
+What do I need to become an Android developer? The short answer is you'll need the Java language and Android Studio, which is an IDE (integrated development environment). And of course a smart brain! Some will ask, do I have to have an Android device to be a developer? No, you don't. Even though last year our students were given Moto 360s (Moto E2s the year before, all free of charge), you don't have to own an Android device.
 
 ## A step-by-step tutorial
 
@@ -27,24 +27,72 @@ In this section you have 2 small tasks to achieve, each of which will last about
 
 Follow the steps below to create and run your first Android app:
 
-1. Start Android Studio, then click 'Start a new Android Studio project', and give it a name such as 'Hello Android'.
-2. In 'Project location' settings select your desired location.
+1. Click the Start menu and navigate to Android Studio, click on it to start the application.
+    
+    ![start](.md_images/start.png)
+    
+    If you see the following window, choose 'I do not have...' and click OK.
+    
+    ![start](.md_images/install.png)
+    
+2. Then click on 'Start a new Android Studio project'.
+    
+    ![start](.md_images/new.png)
+    
+2. In the window that pops up, give it a name such as 'Hello Android'. In 'Project location' settings select your desired location.
+    
+    ![start](.md_images/hello.png)
+        
 3. Next screen asks you to choose minimum SDK. The default value should do. If you want to know more about this minimum SDK, click on 'Help me choose' and read the info that comes up. 
     
     ![Android_Platform_API_Version_Distribution](.md_images/Android_Platform_API_Version_Distribution.png)
     
-4. Use all default settings until you see Finish. Click Finish to create your first Android project. Your screen should look similar to below:
+4. Keep clicking Next until you see Finish. Then click Finish to create your first Android project. Your screen should look similar to below:
     
     ![activity_main_xml_-_Hello_Android](.md_images/activity_main_xml_-_Hello_Android.png)
     
+    If this is the first time Android Studio is being run on the computer, this step might take a while. You need to wait until the task bar finishes to move to the next step.
+    
+    ![start](.md_images/build.png)
+    
+4. You'll now see an error message 'This version of the rending library is more recent...' 
+    
+    ![start](.md_images/error.png)
+    
+    To get around this, you will need to open the styles.xml file by navigating to app ==> res ==> values ==> styles.xml in the Android tool window and double click on it
+    
+    ![start](.md_images/style.png)
+    
+    Now the file will open in the main editor. Change the text from 
+    
+    ```xml
+    Theme.AppCompat.Light.DarkActionBar
+    ```
+    
+    to
+    
+    ```xml
+    Base.Theme.AppCompat.Light.DarkActionBar
+    ```
+5. Go back to activity_main.xml and switch the Preview Version to API22: Android 5.1.1. The error  should now go away.
+    
+    ![start](.md_images/mnc.png)
+    
 5. You're ready to run the app you just created. The reason you don't have to own an Android device to become a developer is that you can run an Android simulator. That is, a computer programme that simulates the behavior of a real Android phone or tablet. Now let's make sure you have the default AVD installed. 
     
-    Click Tools ==> Android ==> AVD Manager to show the AVD Manager. You should see something similar to below
+    Click Tools ==> Android ==> AVD Manager to show the AVD Manager
     
-    xxxx
+    ![start](.md_images/avd.png)
     
-    If not, click 'Create Virtual Device' button to create a new one. The following settings seem reasonable: Phone, Nexus 5, targeting at latest Android 6.0 with Google APIs. And most importantly, 'Use Host GPU' is checked. 
+    You should see something similar to below
     
+    ![start](.md_images/newavd.png)
+    
+    Click 'Create Virtual Device' button and use all default options to create a new one. Once created, click the little green triangle to run it. You might have to wait a while for it to load.
+    
+    ![start](.md_images/runavd.png)
+    
+    On some of the machines, this will give you an error 'Cannot launch AVD in emulator'. If this happens to you, we have an Nexus 7 tablet to run your app.
 5. Now click Run ==> Run 'app' to run the app you just created. In the window that pops up, click 'Launch emulator' and choose the desired AVD if you have more than one. BTW, you should only have 1 AVD running, otherwise the system will be rather slow. You will see HelloAndroid running in AVD similar to the one below.
     
     ![hello_android](.md_images/hello_android.png)
@@ -56,7 +104,7 @@ Follow steps below to create another app:
 1. In Android Studio, click 'Start a new Android Studio project', and give it a name such as 'Hello Me'.
 2. In 'Project location' settings select your desired location. 
 3. Use all default settings until you see Finish. These steps are the same as before, and should become the *de facto* standard.
-4. Double click to open 'content_main.xml' if it’s not opened already.
+4. Double click to open 'activity_main.xml' if it’s not opened already.
     
     ![Content main](.md_images/content_main.png)
     
@@ -130,7 +178,7 @@ Follow steps below to create another app:
     ```
     Note when you first use a class that hasn't been imported, Android Studio will show the class name in red. You'll need to import the class. The keyboard shortcut to do the importing is 'alt' + 'enter'.
     
-11. Go back to the layout xml file you modified before, change the Button tag to include the following attribute:
+11. Go back to the layout file activity_main.xml you modified earlier, change the Button tag to include the following attribute:
     
     ```xml
     android:onClick="onButtonClick"
