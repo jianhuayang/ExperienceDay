@@ -13,9 +13,9 @@ In this 50 minutes session you'll have a little taste of what our students do at
 
 First of all, let's ask a question - what is Android? Well, the answer depends on who you ask. There're several different levels to define Android: on the very deep level, it's a Linux operating system that controls a bunch of hardware and sensors. This is the same as any other operating systems such as Mac/Windows; on the very superficial level, Android are devices such as Samsung Galaxy or HTC; For us, Android developers, Android is an application runtime that we can develop mobile apps.
 
-Android has been around for a while, hence we have different versions. For each version of Android, we have a 'sweet' codename with the latest being 'Lollipop' and 'Marshmallow', which are not shown in the picture below.
+Android has been around for a while, hence we have different versions. For each version of Android, we have a 'sweet' codename with the latest being 'Nougat' (Android 7.0)
 
-![Android Codename](http://techtoward.com/wp-content/uploads/2014/02/Android-Versions-History.jpg)
+![Android Codename](http://www.geektech.in/wp-content/uploads/2016/07/Android-Nougat-Release-Date.png)
 
 What do I need to become an Android developer? The short answer is you'll need the Java language and Android Studio, which is an IDE (integrated development environment). And of course a smart brain! Some will ask, do I have to have an Android device to be a developer? No, you don't. Even though last year our students were given Moto 360s (Moto E2s the year before, all free of charge), you don't have to own an Android device.
 
@@ -55,11 +55,11 @@ Follow the steps below to create and run your first Android app:
     
     ![start](.md_images/build.png)
     
-4. You'll now see an error message 'This version of the rending library is more recent...' 
+4. In case you see an error message 'This version of the rending library is more recent...' 
     
     ![start](.md_images/error.png)
     
-    To get around this, you will need to open the styles.xml file by navigating to app ==> res ==> values ==> styles.xml in the Android tool window and double click on it
+    You will need to open the styles.xml file by navigating to app ==> res ==> values ==> styles.xml in the Android tool window and double click on it
     
     ![start](.md_images/style.png)
     
@@ -74,7 +74,7 @@ Follow the steps below to create and run your first Android app:
     ```xml
     Base.Theme.AppCompat.Light.DarkActionBar
     ```
-5. Go back to activity_main.xml and switch the Preview Version to API22: Android 5.1.1. The error  should now go away.
+    Go back to activity_main.xml and switch the Preview Version to API22: Android 5.1.1. The error  should now go away.
     
     ![start](.md_images/mnc.png)
     
@@ -116,7 +116,7 @@ Follow steps below to create another app:
     
     > See the little camera in the Preview window menu bar. Guess what it does?
     
-7. Click the 'Design' tab to switch to the design view. Locate and drag the following four widgets from Palette to the layout one by one: Plain TextView, SmallText, PersonName, Button. Your Component Tree should look at the following
+7. Click the 'Design' tab to switch to the design view. Locate and drag the following four widgets from Palette to the layout one by one:  TextView, (another) TextView, Plain Text, and Button. Your Component Tree should look at the following
     
     ![Content main](.md_images/component_tree.png)
     
@@ -127,43 +127,47 @@ Follow steps below to create another app:
 9. Click the 'Text' tab to go back to the text view. Manually edit the xml file, make it look like the following
     
     ```xml
-     <TextView
-        android:id="@+id/textViewDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World"
-        android:textSize="24sp" />
-        
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/textViewDisplay"
-        android:layout_below="@id/textViewDisplay"
-        android:layout_marginLeft="19dp"
-        android:layout_marginTop="56dp"
-        android:text="Name:"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-        
+      android:id="@+id/textViewDisplay"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentTop="true"
+      android:text="Hellow World"
+      android:textSize="24sp" />
+
+    <TextView
+      android:id="@+id/textView2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignLeft="@+id/textViewDisplay"
+      android:layout_alignStart="@+id/textViewDisplay"
+      android:layout_below="@+id/textViewDisplay"
+      android:layout_marginLeft="19dp"
+      android:layout_marginTop="56dp"
+      android:text="Name:"
+      android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/textView1"
-        android:layout_alignBottom="@id/textView1"
-        android:layout_marginLeft="36dp"
-        android:layout_toRightOf="@id/textView1"
-        android:ems="10"
-        android:inputType="textPersonName" />
-        
+      android:id="@+id/editText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBaseline="@id/textView2"
+      android:layout_alignBottom="@id/textView2"
+      android:layout_marginLeft="36dp"
+      android:layout_toRightOf="@id/textView2"
+      android:ems="10"
+      android:inputType="textPersonName" />
+
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
-        android:text="Display" />
+      android:id="@+id/button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/editText"
+      android:layout_marginTop="22dp"
+      android:layout_centerHorizontal="true"
+      android:text="Display" />
     ```
     
 10. Open MainActivity.java, create a method called onButtonClick that looks like below:
