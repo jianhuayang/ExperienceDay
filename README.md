@@ -2,12 +2,12 @@
 
 ![](.md_images/347.JPG)
 
-Hello! Welcome to Android activities at Coventry University expereince day! 
+Hello! Welcome to Android activities at Coventry University experience day!
 
-In this 50 minutes session you'll have a little taste of what our students do at Coventry. In particular, what you see right now is a (much) simplified version of the material we use for our undergraduate module 'Mobile Applications Development'. If you're curious, the full set of material can be found here:
+In this session, you'll have a little taste of what our students do at Coventry. In particular, what you see right now is a (much) simplified version of the material we use for our undergraduate module 'Mobile Applications Development'. If you're curious, the full set of material can be found here:
 
-* [Android App Development](https://github.com/covcom/388COM)
-* [iOS App Development](https://github.com/covcom/387COM)
+* [Android App Development](https://github.com/covcom/300CEM)
+* [iOS App Development](https://github.com/covcom/301CEM)
 
 ## A little background
 
@@ -21,7 +21,7 @@ What do I need to become an Android developer? The short answer is you'll need t
 
 ## A step-by-step tutorial
 
-In this section you have 2 small tasks to achieve, each of which will last about 15 minutes. If you get stuck at any time, put your hands up and someone will help you. I assume you all know something about programming. If not, let one of us know. 
+In this section, you have 2 small tasks to achieve, each of which will last about 20 minutes. If you get stuck at any time, put your hands up and someone will help you. I assume you all know something about programming. If not, let us know. 
 
 ### Task 1: start a project from template
 
@@ -39,90 +39,69 @@ Follow the steps below to create and run your first Android app:
     
     ![start](.md_images/new.png)
     
-2. In the window that pops up, give it a name such as 'Hello Android'. In 'Project location' settings select your desired location.
+3. In the window that pops up, give it a name such as 'Hello Android'. In 'Project location' settings select your desired location.
     
     ![start](.md_images/hello.png)
         
-3. Next screen asks you to choose minimum SDK. The default value should do. If you want to know more about this minimum SDK, click on 'Help me choose' and read the info that comes up. 
+4. Next screen asks you to choose minimum SDK. The default value should do. If you want to know more about this minimum SDK, click on 'Help me choose' and read the info that comes up. 
     
     ![Android_Platform_API_Version_Distribution](.md_images/Android_Platform_API_Version_Distribution.png)
     
-4. Keep clicking Next until you see Finish. Then click Finish to create your first Android project. Your screen should look similar to below:
+5. Keep clicking Next until you see Finish. Then click Finish to create your first Android project. Your screen should look similar to below:
      
     ![activity_main_xml_-_Hello_Android](.md_images/activity_main_xml_-_Hello_Android.png)
     
-    If this is the first time Android Studio is being run on the computer, this step might take a while. You need to wait until the task bar finishes to move to the next step.
+    If this is the first time Android Studio is being run on the computer, this step might take a while. You need to wait until the taskbar finishes to move to the next step.
     
     ![start](.md_images/build.png)
     
-4. In case you see an error message 'This version of the rending library is more recent...' 
-    
-    ![start](.md_images/error.png)
-    
-    You will need to open the styles.xml file by navigating to app ==> res ==> values ==> styles.xml in the Android tool window and double click on it
-    
-    ![start](.md_images/style.png)
-    
-    Now the file will open in the main editor. Change the text from 
-    
-    ```xml
-    Theme.AppCompat.Light.DarkActionBar
-    ```
-    
-    to
-    
-    ```xml
-    Base.Theme.AppCompat.Light.DarkActionBar
-    ```
-    Go back to activity_main.xml and switch the Preview Version to API22: Android 5.1.1. The error  should now go away.
-    
-    ![start](.md_images/mnc.png)
-    
-5. You're ready to run the app you just created. The reason you don't have to own an Android device to become a developer is that you can run an Android simulator. That is, a computer programme that simulates the behavior of a real Android phone or tablet. Now let's make sure you have the default AVD installed. 
+6. You're ready to run the app you just created. The reason you don't have to own an Android device to become a developer is that you can run an Android simulator. That is a computer program that simulates the behavior of a real Android phone or tablet. Now let's make sure you have the default AVD installed. 
     
     Click Tools ==> Android ==> AVD Manager to show the AVD Manager
     
     ![start](.md_images/avd.png)
     
-    You should see something similar to below
+    You should see something similar to below (
+    
+    > If you're lucky to be in the second group, you'll have one created for you already. You can safely ignore this step, or you can still create a new one if you wish.
     
     ![start](.md_images/newavd.png)
     
-    Click 'Create Virtual Device' button and use all default options to create a new one. Once created, click the little green triangle to run it. You might have to wait a while for it to load.
+    Click 'Create Virtual Device' button and use system image API 23 to create a new one (the other image that is available is API25, try not to use it as it hasn't been fully tested). 
+    
+    Once created, click the little green triangle to run it. You might have to wait a while for it to load.
     
     ![start](.md_images/runavd.png)
     
-    On some of the machines, this will give you an error 'Cannot launch AVD in emulator'. If this happens to you, we have an Nexus 7 tablet to run your app.
-5. Now click Run ==> Run 'app' to run the app you just created. In the window that pops up, click 'Launch emulator' and choose the desired AVD if you have more than one. BTW, you should only have 1 AVD running, otherwise the system will be rather slow. You will see HelloAndroid running in AVD similar to the one below.
+    On some of the machines, this will give you an error 'Cannot launch AVD in emulator'. If this happens to you, we have Nexus 7 tablets to run your app.
+5. Now click Run ==> Run 'app' to run the app you just created. In the window that pops up, click 'Launch emulator' and choose the desired AVD if you have more than one. BTW, you should only have 1 AVD running, otherwise, the system will be rather slow. You will see HelloAndroid running in AVD similar to the one below.
     
     ![hello_android](.md_images/hello_android.png)
     
 ### Task 2: customize layouts and run on a real device
 
-Follow steps below to create another app:
+This task will again take about 20 minutes to complete. Follow steps below to create another app:
 
 1. In Android Studio, click 'Start a new Android Studio project', and give it a name such as 'Hello Me'.
 2. In 'Project location' settings select your desired location. 
-3. Use all default settings until you see Finish. These steps are the same as before, and should become the *de facto* standard.
+3. Use all default settings until you see Finish. These steps are the same as in the previous section and should become the *de facto* standard.
 4. Double click to open 'activity_main.xml' if it’s not opened already.
     
     ![Content main](.md_images/content_main.png)
     
-5. Under default settings the 'Text' view will show. Click 'Preview' tool window to the right edge of the IDE to bring up the Preview window. Your whole workbench should look like below.
+5. Under default settings, the 'Text' view will show. If not, click on the Text tab to switch to the text view. Then, click 'Preview' tool window to the right edge of the IDE to bring up the Preview window. Your whole workbench should look similar to below.
     
     ![Content main](.md_images/text_view.png)
     
 6. Delete texts contained between '<span>&lt;</span>TextView' and the closing '/>'. You'll see that the words 'Hello World' disappeared on the preview window.
-    
-    > See the little camera in the Preview window menu bar. Guess what it does?
-    
+        
 7. Click the 'Design' tab to switch to the design view. Locate and drag the following four widgets from Palette to the layout one by one:  TextView, (another) TextView, Plain Text, and Button. Your Component Tree should look at the following
     
     ![Content main](.md_images/component_tree.png)
     
 8. At this point, if you click one of the widgets you just dragged onto the graphical layout, you can change its properties using the Properties window. Try to change some of the properties to see the effects, and we’ll change them back later.
     
-    > The graphical layout in the design view is not to be confused with preview in the text view. The preview tool is more powerful for example sometimes it gives error message 'Rendering Problems.
+    > The graphical layout in the design view is not to be confused with preview in the text view. The preview tool is more powerful for example sometimes it gives error messages such as 'Rendering Problems'.
     
 9. Click the 'Text' tab to go back to the text view. Manually edit the xml file, make it look like the following
     
@@ -191,7 +170,7 @@ Follow steps below to create another app:
     
 12. Now you need to ask one of our staff to connect Nexus 7 to your machine so you can run the app on a real device.
 
-13. Run this app and select Nexus 7 as the target. Once you input something for example your name and click Display, your name will appear in the greeting message. 
+13. Run this app and select Nexus 7 as the target. Once you input something, for example, your name and click Display, your name will appear in the greeting message. 
     
     ![hello jianhua](.md_images/hello_jianhua.png)
 
@@ -203,7 +182,7 @@ Here are some projects and apps our students developed for the module and also i
 
 ![](https://lh3.googleusercontent.com/NDC_hS0j9dXtLqYbuhb0iYavYdTCcXlmyAwNj1r2l16bCvksguZDwBRp7TWCd6u4Agk=h310-rw)
 
-Swiftnotes is an Android app developed by Adrian Chifor. The app is available in [Play store](https://play.google.com/store/apps/details?id=com.moonpi.swiftnotes) and sourcecode for the app can be found [here](https://github.com/adrianchifor/Swiftnotes).
+Swiftnotes is an Android app developed by Adrian Chifor. The app is available in [Play store](https://play.google.com/store/apps/details?id=com.moonpi.swiftnotes) and source code for the app can be found [here](https://github.com/adrianchifor/Swiftnotes).
 
 ![](.md_images/furger.png)
 
