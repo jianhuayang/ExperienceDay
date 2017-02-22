@@ -180,6 +180,10 @@ We're **one of the first** UK universities that offer courses in mobile app deve
 
 Here are some projects and apps our students developed for the module and also in their free time:
 
+![](https://github.com/freshollie/MonkeyboardAndroidRadioApp/raw/master/screenshots/main_interface.png)
+
+[Monkeyboard Android Radio App](https://github.com/freshollie/MonkeyboardAndroidRadioApp) created by Oliver Bell, who is currently a 2nd-year Computer Science student completed our Android module in 2016.
+
 ![](https://lh3.googleusercontent.com/NDC_hS0j9dXtLqYbuhb0iYavYdTCcXlmyAwNj1r2l16bCvksguZDwBRp7TWCd6u4Agk=h310-rw)
 
 Swiftnotes is an Android app developed by Adrian Chifor. The app is available in [Play store](https://play.google.com/store/apps/details?id=com.moonpi.swiftnotes) and source code for the app can be found [here](https://github.com/adrianchifor/Swiftnotes).
